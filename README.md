@@ -1,21 +1,21 @@
-```markdown
 # BinanceAgent
 
-BinanceAgent 是一个基于 Flask 的对话服务，旨在通过与用户的对话来执行币安（Binance）API 的相关操作。它集成了多个币安 API 工具，能够根据用户的需求自动调用相应的工具并返回结果。
+BinanceAgent is a Flask-based conversational service designed to execute Binance API operations through user dialogue. It integrates multiple Binance API tools to automatically invoke the appropriate function based on user requests and return relevant results.
 
-## 功能概述
+## Features
 
-BinanceAgent 提供了以下功能：
+BinanceAgent provides the following functionalities:
 
-1. **获取当前价格**：通过 `get_symbol_price` 工具获取指定交易对的当前价格。
-2. **获取账户余额**：通过 `get_account_balance` 工具获取指定币种的账户余额。
-3. **下达市价单**：通过 `place_market_order` 工具下达市价单。
-4. **获取交易历史**：通过 `get_trade_history` 工具获取指定交易对的交易历史。
-5. **获取未成交订单**：通过 `get_open_orders` 工具获取指定交易对的未成交订单。
-6. **取消订单**：通过 `cancel_order` 工具取消指定订单。
+1. **Get Current Price**: Retrieve the latest price of a specified trading pair using the `get_symbol_price` tool.
+2. **Get Account Balance**: Check the balance of a specified cryptocurrency using the `get_account_balance` tool.
+3. **Place Market Order**: Execute a market order using the `place_market_order` tool.
+4. **Retrieve Trade History**: Fetch the trade history of a specified trading pair using the `get_trade_history` tool.
+5. **Check Open Orders**: Get a list of open orders for a specified trading pair using the `get_open_orders` tool.
+6. **Cancel an Order**: Cancel a specific order using the `cancel_order` tool.
 
-## 文件结构
+## Project Structure
 
+<<<<<<< HEAD
 📂 BinanceAgent/
 ├── 📜 model.py - Manages models, handles dialogue logic
 ├── ⚙️ config.py - Configuration parameters, such as API keys
@@ -23,54 +23,65 @@ BinanceAgent 提供了以下功能：
 ├── 🚀 service.py - Flask service, runs the dialogue system
 ├── 🧪 test.py - Test cases, simulates API calls
 └── 📄 README.md - Project documentation
+=======
+```
+📂 BinanceAgent/
+├── 📜 model.py       - Manages models, handles dialogue logic
+├── ⚙️ config.py       - Configuration parameters, such as API keys
+├── 🔧 tool.py        - Trading tools and their registration process
+├── 🚀 service.py     - Flask service, runs the dialogue system
+├── 🧪 test.py        - Test cases, simulates API calls
+└── 📄 README.md      - Project documentation
+```
+>>>>>>> e9bf12c5a7c45380db13ffe815b09271f6a8ab31
 
-## 快速开始
+## Quick Start
 
-### 1. 克隆仓库
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/BinanceAgent.git
 cd BinanceAgent
 ```
 
-### 2. 安装依赖
+### 2. Install Dependencies
 
-确保你已经安装了 Python 3.7 或更高版本。然后安装所需的依赖：
+Ensure you have Python 3.7 or higher installed. Then install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. 配置 API 密钥
+### 3. Configure API Keys
 
-在 `config.py` 文件中配置你的币安 API 密钥：
+Set up your Binance API keys in the `config.py` file:
 
 ```python
 API_KEY = 'your-binance-api-key'
 API_SECRET = 'your-binance-api-secret'
 ```
 
-### 4. 启动服务
+### 4. Start the Service
 
-运行 `service.py` 启动 Flask 服务：
+Run `service.py` to launch the Flask service:
 
 ```bash
 python service.py
 ```
 
-服务启动后，你可以通过 `http://127.0.0.1:5000/chat` 与 BinanceAgent 进行对话。
+Once the service is running, you can interact with BinanceAgent via `http://127.0.0.1:5000/chat`.
 
-### 5. 测试
+### 5. Testing
 
-你可以使用 `test.py` 中的样例来测试对话服务：
+You can test the conversation service using the sample cases in `test.py`:
 
 ```bash
 python test.py
 ```
 
-## 示例对话
+## Example Conversations
 
-以下是 BinanceAgent 的示例对话流程：
+Here are some sample interactions with BinanceAgent:
 
 ```plaintext
 User: What is the current price of BTC?
@@ -95,11 +106,10 @@ AI: It seems that I am unable to cancel the order due to an invalid API key, IP,
 --------------------------------------------------
 ```
 
-## 贡献
+## Contribution
 
-欢迎贡献代码！如果你有任何建议或发现问题，请提交 Issue 或 Pull Request。
+Contributions are welcome! If you have suggestions or find any issues, feel free to submit an Issue or a Pull Request.
 
-## 许可证
+## License
 
-本项目采用 [MIT 许可证](LICENSE)。
-```
+This project is licensed under the [MIT License](LICENSE).
