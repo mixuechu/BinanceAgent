@@ -16,15 +16,15 @@ BinanceAgent 提供了以下功能：
 
 ## 文件结构
 
-```
-BinanceAgent/
-├── model.py          # 管理模型，处理对话逻辑
-├── config.py         # 配置参数，如 API 密钥等
-├── tool.py           # 交易工具及其注册流程
-├── service.py        # Flask 服务，启动对话服务
-├── test.py           # 测试样例，模拟调用对话接口
-└── README.md         # 项目说明文档
-```
+<pre>
+📂 BinanceAgent/
+├── 📜 <b>model.py</b>       - Manages models, handles dialogue logic
+├── ⚙️ <b>config.py</b>       - Configuration parameters, such as API keys
+├── 🔧 <b>tool.py</b>        - Trading tools and their registration process
+├── 🚀 <b>service.py</b>     - Flask service, runs the dialogue system
+├── 🧪 <b>test.py</b>        - Test cases, simulates API calls
+└── 📄 <b>README.md</b>      - Project documentation
+</pre>
 
 ## 快速开始
 
@@ -105,11 +105,3 @@ AI: It seems that I am unable to cancel the order due to an invalid API key, IP,
 
 本项目采用 [MIT 许可证](LICENSE)。
 ```
-
-### 说明：
-1. **文件结构**：你可以根据实际的文件结构进行调整。
-2. **API 密钥配置**：确保在 `config.py` 中正确配置 API 密钥。
-3. **示例对话**：你可以根据实际测试结果更新示例对话。
-4. **依赖**：如果你有 `requirements.txt` 文件，确保在 `README.md` 中提到它。
-
-希望这个 `README.md` 文件能帮助你更好地展示你的项目！如果有任何需要调整的地方，请告诉我。
