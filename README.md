@@ -97,7 +97,7 @@ AI: It seems that I am unable to cancel the order due to an invalid API key, IP,
 ```
 
 ```
-![img_1.png](img_1.png)
+![chat-ui-preview](./image.png)
 ```
 
 
