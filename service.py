@@ -1,5 +1,8 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, Response
 import json
+import time
+import random
+
 from model import ModelManager
 from tool import tool_manager
 
@@ -119,16 +122,53 @@ def handle_chat(prompt, session_id, model_manager, tool_manager):
 
 
 # Flask route
+def chat_stream(response_text):
+    gen_text = ""
+    tok_cnt = 0
+    words = response_text.split()
+
+    for word in words:
+        tok_cnt += 1
+        gen_text += word + " "
+        tok = {
+            "token": {
+                "id": random.randrange(0, 2 ** 32),
+                "text": word,
+                "logprob": 0,
+                "special": False,
+            },
+            "generated_text": None,
+            "details": None
+        }
+        yield f"data:{json.dumps(tok, separators=(',', ':'))}\n\n"
+        time.sleep(0.1)
+    final_tok = {
+        "token": {
+            "id": random.randrange(0, 2 ** 32),
+            "text": None,
+            "logprob": 0,
+            "special": True,
+        },
+        "generated_text": gen_text.strip(),
+        "details": {
+            "finish_reason": "stop",
+            "generated_tokens": tok_cnt,
+            "seed": None
+        }
+    }
+    yield f"data:{json.dumps(final_tok, separators=(',', ':'))}\n\n\n"
+
+
 @app.route('/chat', methods=['POST'])
 def chat():
     data = request.json
     session_id = data.get('session_id', "root_session")
-    prompt = data.get('prompt')
+    prompt = data.get('inputs')
 
-    # Process user input and generate a response
-    response, function_call_step = handle_chat(prompt, session_id, model_manager, tool_manager)
+    response, _ = handle_chat(prompt, session_id, model_manager, tool_manager)
 
-    return jsonify({"response": response, "session_id": session_id, "function_call_step": function_call_step})
+    return Response(chat_stream(response), content_type='text/event-stream',
+                    headers={"Content-Type": "text/event-stream"})
 
 
 if __name__ == '__main__':
