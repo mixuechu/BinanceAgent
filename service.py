@@ -1,8 +1,7 @@
 from flask import Flask, request, jsonify
 import json
 from model import ModelManager
-from tool import ToolManager, tool_manager
-from config import Config
+from tool import tool_manager
 
 app = Flask(__name__)
 

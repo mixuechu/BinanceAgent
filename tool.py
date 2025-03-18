@@ -58,6 +58,7 @@ def register_tool(description, parameters):
             parameters=parameters
         )
         return func
+
     return decorator
 
 
