@@ -96,6 +96,23 @@ AI: It seems that I am unable to cancel the order due to an invalid API key, IP,
 --------------------------------------------------
 ```
 
+```
+![img_1.png](img_1.png)
+```
+
+
+## Frontend
+
+I didn’t have time to implement a frontend framework, so I ensured our agent works well with ChatUI.
+
+https://github.com/huggingface/chat-ui
+
+Start the service, replace the .env file in the chat-ui folder with the one I provided, then run:
+```
+npm run dev
+```
+And you’re good to go! 🚀
+
 ## Contribution
 
 Contributions are welcome! If you have suggestions or find any issues, feel free to submit an Issue or a Pull Request.
