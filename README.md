@@ -15,7 +15,7 @@ BinanceAgent 提供了以下功能：
 6. **取消订单**：通过 `cancel_order` 工具取消指定订单。
 
 ## 文件结构
-
+```bash
 <pre>
 📂 BinanceAgent/
 ├── 📜 <b>model.py</b>       - Manages models, handles dialogue logic
@@ -25,7 +25,7 @@ BinanceAgent 提供了以下功能：
 ├── 🧪 <b>test.py</b>        - Test cases, simulates API calls
 └── 📄 <b>README.md</b>      - Project documentation
 </pre>
-
+```
 ## 快速开始
 
 ### 1. 克隆仓库
