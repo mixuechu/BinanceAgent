@@ -24,7 +24,6 @@ BinanceAgent provides the following functionalities:
 ├── 🧪 test.py        - Test cases, simulates API calls
 └── 📄 README.md      - Project documentation
 ```
->>>>>>> e9bf12c5a7c45380db13ffe815b09271f6a8ab31
 
 ## Quick Start
 
