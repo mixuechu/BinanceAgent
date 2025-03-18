@@ -16,15 +16,13 @@ BinanceAgent 提供了以下功能：
 
 ## 文件结构
 
-<pre>
 📂 BinanceAgent/
-├── 📜 <b>model.py</b>       - Manages models, handles dialogue logic
-├── ⚙️ <b>config.py</b>       - Configuration parameters, such as API keys
-├── 🔧 <b>tool.py</b>        - Trading tools and their registration process
-├── 🚀 <b>service.py</b>     - Flask service, runs the dialogue system
-├── 🧪 <b>test.py</b>        - Test cases, simulates API calls
-└── 📄 <b>README.md</b>      - Project documentation
-</pre>
+├── 📜 model.py - Manages models, handles dialogue logic
+├── ⚙️ config.py - Configuration parameters, such as API keys
+├── 🔧 tool.py - Trading tools and their registration process
+├── 🚀 service.py - Flask service, runs the dialogue system
+├── 🧪 test.py - Test cases, simulates API calls
+└── 📄 README.md - Project documentation
 
 ## 快速开始
 
