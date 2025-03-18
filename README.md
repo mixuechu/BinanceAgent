@@ -15,15 +15,6 @@ BinanceAgent provides the following functionalities:
 
 ## Project Structure
 
-<<<<<<< HEAD
-📂 BinanceAgent/
-├── 📜 model.py - Manages models, handles dialogue logic
-├── ⚙️ config.py - Configuration parameters, such as API keys
-├── 🔧 tool.py - Trading tools and their registration process
-├── 🚀 service.py - Flask service, runs the dialogue system
-├── 🧪 test.py - Test cases, simulates API calls
-└── 📄 README.md - Project documentation
-=======
 ```
 📂 BinanceAgent/
 ├── 📜 model.py       - Manages models, handles dialogue logic
